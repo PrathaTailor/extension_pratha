@@ -1,0 +1,206 @@
+@use '../../styles/variable' as var;
+@use '../../styles/colors' as color;
+
+.container {
+    width: var.$full;
+    max-width: 775.12px;
+    margin: var.$auto;
+
+    .formHeading {
+        text-align: var.$center;
+        padding-top: 50px;
+        padding-bottom: 40px;
+        color: color.$gray;
+
+        .title {
+            font-weight: var.$font-bold;
+            font-size: 32px;
+            line-height: 44px;
+            margin-bottom: 12px;
+        }
+
+        .desc {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+
+    .formWrapper {
+        width: var.$full;
+        border: var.$border var.$decoration-solid rgba(40, 82, 161, 0.3);
+        border-radius: 4px;
+        padding: 30px 61px 50px;
+        margin-bottom: 56px;
+
+        .formTitle {
+            font-weight: var.$font-semibold;
+            font-size: 20px;
+            line-height: 26px;
+            color: color.$blue-charcoal;
+            display: var.$flex;
+            justify-content: var.$center;
+            align-items: var.$center;
+            margin-bottom: 20px;
+            font-family: var.$font-mulish;
+
+            .mailImg {
+                margin: 0px 11.15px 0px 0px;
+            }
+        }
+
+        .formDesc {
+            font-size: 18px;
+            line-height: 26px;
+            color: color.$blue-charcoal;
+            padding-bottom: 40px;
+            font-family: var.$font-mulish;
+        }
+
+        .formContact {
+            display: var.$flex;
+            flex-wrap: var.$wrap;
+
+            .halfWrapper {
+                display: var.$flex;
+                width: var.$full;
+                gap: 15px;
+            }
+
+            .fieldWrapper {
+                width: var.$full;
+                margin-bottom: 20px;
+
+                &.half {
+                    width: var.$full;
+                    max-width: var.$half;
+                }
+
+                .formLabel {
+                    font-weight: var.$font-medium;
+                    font-size: 14px;
+                    line-height: 14px;
+                    display: var.$inline-block;
+                    margin-bottom: 5px;
+                    font-family: var.$font-mulish;
+                }
+
+                input,
+                textarea {
+                    border: var.$border var.$decoration-solid color.$dim-gray;
+                    border-radius: 4px;
+                    width: var.$full;
+                    background: color.$white-smoke;
+                    padding: 17.5px 15px;
+                    color: color.$dim-gray;
+                    font-size: 14px;
+                    font-family: var.$font-mulish;
+                }
+
+                input {
+                    height: 45px;
+                    line-height: 10px;
+                }
+
+                textarea {
+                    height: 110px;
+                    line-height: 18px;
+                    resize: var.$d-none;
+                }
+            }
+
+            .uploadWrapper {
+                padding: 15px;
+                border: var.$border var.$decoration-solid color.$dim-gray;
+                border-radius: 4px;
+                width: var.$full;
+                position: var.$relative;
+                height: 76px;
+                display: var.$flex;
+                align-items: var.$center;
+
+                .upload {
+                    position: var.$absolute;
+                    left: 0px;
+                    top: 0px;
+                    height: var.$full;
+                    width: var.$full;
+                    opacity: 0;
+                }
+
+                .chooseFiles {
+                    padding: 15px;
+                    border: var.$border var.$decoration-solid color.$dim-gray;
+                    border-radius: 4px;
+                    display: var.$flex;
+                    align-items: var.$center;
+                    justify-content: var.$center;
+                    height: 46px;
+                    font-size: 14px;
+                    line-height: 10px;
+                    color: color.$dim-gray;
+
+                    img {
+                        display: var.$inline-block;
+                        margin-right: 10px;
+                    }
+                }
+
+                .or {
+                    display: var.$inline-block;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    font-size: 14px;
+                    line-height: 10px;
+                    color: color.$dim-gray;
+                }
+
+                .dragdrop {
+                    display: var.$flex;
+                    align-items: var.$center;
+
+                    img {
+                        display: var.$inline-block;
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+            .btnWrapper {
+                display: var.$flex;
+                align-items: var.$center;
+                justify-content: var.$center;
+                width: var.$full;
+                margin-top: 40px;
+                gap: 15px;
+
+                .btn {
+                    padding: 15px 40px;
+                    border-radius: 4px;
+                    height: 45px;
+                    width: var.$full;
+                    max-width: 238px;
+                    display: var.$flex;
+                    align-items: var.$center;
+                    justify-content: var.$center;
+                    border: var.$d-none;
+                    cursor: var.$cursor-pointer;
+                    font-weight: var.$font-semibold;
+                    font-size: 14px;
+                    line-height: 10px;
+                    font-family: var.$font-mulish;
+
+                    &.submit {
+                        background: color.$violet;
+                        color: color.$white;
+                        border: var.$border var.$decoration-solid color.$violet;
+                    }
+
+                    &.reset {
+                        border: var.$border var.$decoration-solid color.$dim-gray;
+                        background-color: color.$transparent;
+                    }
+                }
+            }
+        }
+    }
+}

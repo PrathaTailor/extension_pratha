@@ -1,0 +1,44 @@
+@use '../../../styles/variable' as var;
+@use '../../../styles/colors' as color;
+
+.container {
+    padding: 8px 20px;
+    width: var.$full;
+    max-width: 718px;
+    margin: var.$auto;
+
+    .alertDesc {
+        display: var.$flex;
+        align-items: var.$start;
+        border: 1px solid rgba(15, 30, 255, 0.4);
+        padding: 26px 34px;
+        font-size: 18px;
+        line-height: 130%;
+        letter-spacing: -0.02em;
+        color: color.$base-black;
+
+        @media screen and (max-width:var.$reg-tablet) {
+            padding: 26px 34px;
+            line-height: 28px;
+        }
+
+        p {
+            @media screen and (max-width:var.$reg-tablet) {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 21px;
+                letter-spacing: -0.02em;
+            }
+        }
+
+        .alertIcon {
+            display: var.$inline-block;
+            margin-right: 16px;
+            max-width: 31px;
+            object-fit: var.$contain;
+        }
+    }
+
+}

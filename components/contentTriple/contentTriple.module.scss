@@ -1,0 +1,300 @@
+@use '../../styles/variable' as var;
+@use '../../styles/colors' as color;
+
+.reasonContainer {
+  width: var.$full;
+  max-width: 1040px;
+  margin: 50px var.$auto 110px var.$auto;
+
+  h1 {
+    font-size: 32px;
+    line-height: 44px;
+    font-weight: var.$font-extrabold;
+    text-align: var.$center;
+  }
+
+  .reasonWrapper {
+    display: var.$flex;
+    flex-direction: var.$flex-col;
+    gap: 40px;
+    margin-top: 40px;
+
+    .reasonSection {
+      display: var.$flex;
+      gap: 40px;
+
+      .reasonImgWrapper {
+
+        .reasonImage {
+          height: 150px;
+          max-width: 150px;
+          position: var.$relative;
+          bottom: -10px;
+        }
+      }
+
+      .reasonContentWrapper {
+        h2 {
+          margin-top: 22px;
+          font-size: 24px;
+          line-height: 33px;
+          letter-spacing: 0px;
+          margin-bottom: 9px;
+          font-weight: var.$font-extrabold;
+        }
+
+        p {
+          line-height: 22px;
+          font-size: 16px;
+        }
+
+        .cutrecwra {
+          margin: 30px 0px 11px 0px !important;
+        }
+      }
+
+      .reasonContentWrapper {
+        h2:nth-child(1) {
+          color: color.$blue;
+          margin-top: 11px;
+        }
+      }
+
+      .reasonContentWrapper:nth-child(2) {
+        color: color.$base-black
+      }
+
+      &:nth-child(1) .reasonContentWrapper h2 {
+        color: color.$jungle-green;
+        margin-top: 20.5px;
+        margin-bottom: 10px;
+      }
+
+      &:nth-child(1) .reasonImgWrapper img {
+        margin-top: 10px;
+        position: var.$relative;
+        top: -9px;
+      }
+
+      &:nth-child(3) .reasonContentWrapper h2 {
+        color: color.$violet;
+        margin-top: 0px;
+        margin-bottom: 10px;
+      }
+
+      &:nth-child(3) .reasonContentWrapper p {
+        padding-right: 2px;
+      }
+
+    }
+
+    .reasonSection:nth-child(2) {
+      .reasonImgWrapper {
+
+        .reasonImage {
+          margin-top: 11px;
+          position: var.$relative;
+          bottom: 10px;
+        }
+
+      }
+
+    }
+
+    .reasonSection:nth-child(3) {
+      .reasonImgWrapper {
+
+        .reasonImage {
+          margin-top: 35px;
+          position: var.$relative;
+          bottom: 11px;
+        }
+
+      }
+
+    }
+
+    .reasonSection:nth-child(even) {
+      flex-direction: var.$flex-row-reverse;
+      gap: 39px;
+      align-items: var.$center;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+
+  .reasonContainer {
+    margin-top: 61px;
+    margin-bottom: 60px;
+
+    h1 {
+      font-size: 22px;
+      line-height: var.$leading-lg;
+      max-width: calc(var.$full - 48px);
+      margin: 0px var.$auto;
+    }
+
+    .reasonWrapper {
+      margin-top: 30px;
+      gap: 30px;
+
+      .reasonSection {
+        flex-flow: var.$flex-col;
+        align-items: var.$center;
+        gap: 15px;
+
+        .reasonContentWrapper {
+          h2 {
+            font-weight: var.$font-extrabold;
+            font-size: 18px;
+            line-height: 22px;
+            max-width: calc(var.$full - 80px);
+            margin: 0px var.$auto;
+            text-align: var.$center;
+          }
+
+          p {
+            max-width: calc(var.$full - 50px);
+            margin: 12px var.$auto 0px var.$auto;
+          }
+        }
+      }
+
+      .reasonSection:nth-child(odd) {
+        flex-flow: var.$flex-col;
+        gap: 5px;
+      }
+
+      .reasonSection:nth-child(even) {
+        flex-flow: var.$flex-col;
+        gap: 13px;
+      }
+
+      .reasonSection {
+        &:nth-child(3) .reasonContentWrapper h2 {
+          max-width: calc(var.$full - 55px);
+          margin-bottom: 9px !important;
+        }
+
+        &:nth-child(3) .reasonContentWrapper p {
+          max-width: calc(var.$full - 52px);
+        }
+
+        &:nth-child(1) .reasonContentWrapper h2 {
+          line-height: 25px;
+        }
+
+        &:nth-child(1) .reasonContentWrapper p {
+          margin-top: 22px;
+          max-width: calc(var.$full - 49px);
+        }
+      }
+
+    }
+  }
+
+  .reasonSection {
+
+    .reasonContentWrapper h2 {
+      margin-top: 0px !important;
+      letter-spacing: 0px !important;
+    }
+
+    &:nth-child(1) .reasonContentWrapper h2 {
+      margin-top: 0px !important;
+      letter-spacing: 0px !important;
+    }
+
+  }
+
+  .reasonContainer {
+    .reasonWrapper {
+      .reasonSection {
+        .reasonContentWrapper {
+          .cutrecwra {
+            margin: 12px var.$auto 5px var.$auto !important;
+          }
+        }
+      }
+    }
+  }
+
+
+  .reasonSection:nth-child(3) {
+    .reasonImgWrapper {
+
+      .reasonImage {
+        margin-top: 10px !important;
+      }
+
+    }
+
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .reasonContainer {
+    margin-top: 60px;
+    margin-bottom: 60px;
+
+    h1 {
+      font-size: 22px;
+      line-height: var.$leading-lg;
+      max-width: calc(var.$full - 48px);
+      margin: 0px var.$auto;
+    }
+
+    .reasonWrapper {
+      margin-top: 30px;
+      gap: 30px;
+
+      .reasonSection {
+        flex-flow: var.$flex-col;
+        align-items: var.$center;
+        gap: 15px;
+
+        .reasonContentWrapper {
+          h2 {
+            font-weight: var.$font-extrabold;
+            font-size: 18px;
+            line-height: 22px;
+            max-width: calc(var.$full - 80px);
+            margin: 0px var.$auto;
+            text-align: var.$center;
+          }
+
+          p {
+            max-width: calc(var.$full - 48px);
+            margin: 10px var.$auto 0px var.$auto;
+          }
+        }
+      }
+
+      .reasonSection:nth-child(odd) {
+        flex-flow: var.$flex-col;
+        gap: 15px;
+      }
+
+      .reasonSection:nth-child(even) {
+        flex-flow: var.$flex-col;
+        gap: 15px;
+      }
+
+      .reasonSection {
+        &:nth-child(3) .reasonContentWrapper h2 {
+          max-width: calc(var.$full - 75px);
+        }
+
+        &:nth-child(3) .reasonContentWrapper p {
+          max-width: calc(var.$full - 52px);
+        }
+
+        &:nth-child(1) .reasonContentWrapper p {
+          margin-top: 28px;
+        }
+      }
+
+    }
+  }
+}

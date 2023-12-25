@@ -1,0 +1,110 @@
+@use '../../styles/variable' as var;
+@use '../../styles/colors' as color;
+
+.headerContainer {
+  width: var.$full;
+  background-color: color.$violet;
+  color: color.$white;
+  height: 106px;
+  padding: 22px 0px;
+  display: var.$flex;
+  align-items: var.$center;
+
+  .headerWrapper {
+    display: var.$flex;
+    align-items: var.$center;
+    justify-content: var.$flex-between;
+    max-width: 1480px;
+    padding: 0px 20px;
+    width: 100%;
+    margin: 0px var.$auto;
+
+    @media screen and (max-width: var.$xl-tablet) {
+      justify-content: var.$center;
+
+    }
+  }
+
+  .centeredLogoWrapper {
+    display: var.$flex;
+    align-items: var.$center;
+    justify-content: var.$center;
+    max-width: 1480px;
+    padding: 0px 20px;
+    width: 100%;
+    margin: 0px var.$auto;
+  }
+
+  @media screen and (max-width: var.$xl-tablet) {
+    justify-content: var.$center;
+    padding: 20px 16px;
+
+  }
+
+  @media screen and (max-width: var.$phablet) {
+    padding: 20px 16px;
+  }
+
+  @media screen and (max-width: var.$mobile-l) {
+    height: 84px;
+    padding: 0px;
+  }
+
+  .logoWrapper {
+    .logo {
+      width: 170px;
+      object-fit: var.$contain;
+      cursor: var.$cursor-pointer;
+
+      @media screen and (max-width: var.$xl-tablet) {
+        height: 84px;
+        width: 239px;
+      }
+
+      @media screen and (max-width: var.$phablet) {
+        height: 84px;
+        width: 239px;
+      }
+
+      @media screen and (max-width: var.$mobile-l) {
+        height: 28px;
+        width: 239px;
+      }
+    }
+  }
+
+  .btnWrapper {
+    @media screen and (max-width: var.$xl-tablet) {
+      display: var.$d-none;
+    }
+  }
+}
+
+.whiteBgContainer {
+  width: var.$full;
+  background-color: color.$white;
+  color: color.$white;
+  height: 106px;
+  padding: 22px 0px;
+  display: var.$flex;
+  align-items: var.$center;
+
+  // justify-content: var.$center;
+  .centeredLogoWrapper {
+    display: var.$flex;
+    align-items: var.$center;
+    justify-content: var.$center;
+    max-width: 1480px;
+    padding: 0px 20px;
+    width: 100%;
+    margin: 0px var.$auto;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .headerContainer {
+    a {
+      max-width: 238px;
+    }
+  }
+}

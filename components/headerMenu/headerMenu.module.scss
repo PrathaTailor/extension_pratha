@@ -1,0 +1,106 @@
+@use '../../styles/variable' as var;
+@use '../../styles/colors' as color;
+
+.navWrapper {
+  width: var.$full;
+  max-width: 1040px;
+  margin: 35px var.$auto 0px;
+  height: 60px;
+  border-bottom: var.$border var.$decoration-solid color.$light-gray;
+  text-align: var.$center;
+
+  @media screen and (max-width: var.$l-tablet) {
+    margin-top: 0px;
+    height: var.$auto;
+  }
+
+  .navbarSmallContainer {
+    width: var.$full;
+    display: var.$flex;
+    flex-direction: var.$flex-col;
+    letter-spacing: 0.3px;
+    font-size: 14px;
+    line-height: 19px;
+    list-style: var.$d-none;
+    color: color.$base-black;
+    justify-content: var.$flex-between;
+    padding: 10px 0px 40px;
+    font-weight: var.$font-medium;
+    gap: 10px;
+    text-align: var.$left;
+    border-top: 0.5px var.$decoration-solid color.$drover;
+    margin: 0px;
+
+    li {
+      min-height: 33px;
+      display: var.$flex;
+      align-items: var.$center;
+      font-weight: var.$font-semibold;
+      font-size: 14px;
+      line-height: 19px;
+      font-family: var.$font-openSans;
+      padding: 0px 20px;
+
+      &.active {
+        background: color.$brilliant-white;
+        color: color.$blue;
+
+        a {
+          color: color.$blue;
+        }
+      }
+
+      a {
+        text-decoration: var.$d-none;
+        color: color.$base-black;
+
+        &:hover {
+          color: color.$blue;
+
+        }
+      }
+    }
+  }
+
+  .navbarContainer {
+    display: var.$flex;
+    width: var.$full;
+    max-width: var.$full;
+    margin: 0px var.$auto 35px;
+    letter-spacing: 0.3px;
+    font-size: 18px;
+    line-height: 24.51px;
+    list-style: var.$d-none;
+    color: color.$base-black;
+    justify-content: var.$flex-between;
+    padding: 0px 20px;
+    font-weight: var.$font-medium;
+
+    Link,
+    a {
+      text-decoration: var.$d-none;
+      color: color.$base-black;
+      font-weight: var.$font-semibold;
+
+      &:hover {
+        color: color.$violet;
+      }
+
+      &.active {
+        color: color.$violet;
+        font-weight: var.$font-bold;
+        border-bottom: var.$border-2 var.$decoration-solid color.$violet;
+      }
+    }
+  }
+
+  .toggleWrapper {
+    @media screen and (max-width: var.$xl-tablet) {
+      padding: 0px 40px;
+    }
+
+    .menuIconWrapper {
+      padding: 10px 0px;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@use '../../../styles/variable' as var;
+@use '../../../styles/colors' as color;
+
+.container {
+    padding: 8px 20px;
+    width: var.$full;
+    max-width: 718px;
+    margin: var.$auto;
+
+    .alertDesc {
+        display: var.$flex;
+        align-items: var.$start;
+        border: 1px solid color.$drover;
+        padding: 26px 34px;
+        font-size: 18px;
+        line-height: 130%;
+        letter-spacing: -0.02em;
+        color: color.$base-black;
+
+        @media screen and (max-width:var.$reg-tablet) {
+            padding: 16px 24px;
+            line-height: 28px;
+        }
+
+        .alertIcon {
+            display: var.$inline-block;
+            margin-right: 16px;
+            max-width: 31px;
+            object-fit: var.$contain;
+        }
+    }
+
+}

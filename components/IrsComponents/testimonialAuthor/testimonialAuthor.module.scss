@@ -1,0 +1,92 @@
+@use '../../../styles/variable' as var;
+@use '../../../styles/colors' as color;
+
+.authorContainer {
+  width: var.$full;
+  max-width: 658px;
+  margin: var.$auto;
+  padding: 40px 0px;
+  transform: translate(10px, 0px);
+
+  @media screen and (max-width:var.$xl-tablet) {
+    padding: 36px 24px;
+  }
+
+  .authorWrapper {
+    padding: 23px 23px 44px 84px;
+    position: var.$relative;
+    border-radius: 6px;
+    border: 1px solid #E5E8ED;
+
+    @media screen and (max-width:var.$xl-tablet) {
+      padding: 20px;
+      border: 1px solid #E5E8ED;
+    }
+
+    .autherInfo {
+      @media screen and (max-width:var.$xl-tablet) {
+        position: var.$relative;
+        display: var.$flex;
+        align-items: var.$center;
+      }
+
+      .authorImg {
+        position: var.$absolute;
+        left: 0px;
+        transform: translate(-85px, 24.95px);
+        border-radius: var.$half;
+
+        @media screen and (max-width:var.$xl-tablet) {
+          position: var.$relative;
+          width: 74px;
+          height: 74px;
+          transform: translate(0, 0);
+          margin-right: 20px;
+        }
+      }
+
+      .authorLabel {
+        font-weight: var.$font-light;
+        font-size: 15px;
+        line-height: 20px;
+        color: color.$grayish-blue;
+        display: var.$inline-block;
+      }
+
+      .authorName {
+        font-weight: var.$font-bold;
+        font-size: 28px;
+        line-height: 38px;
+        color: color.$base-black;
+
+        @media screen and (max-width:var.$xl-tablet) {
+          font-size: 22px;
+          line-height: 30px;
+        }
+      }
+
+      .authorPosition {
+        font-size: 18px;
+        line-height: 160%;
+        color: #1E79B9;
+
+        @media screen and (max-width:var.$xl-tablet) {
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+    }
+
+    .authorDesc {
+      margin-top: 9px;
+      font-size: 16px;
+      line-height: 148%;
+      color: color.$grayish-blue;
+
+      @media screen and (max-width:var.$xl-tablet) {
+        margin-top: 15px;
+        line-height: 20px;
+      }
+    }
+  }
+}

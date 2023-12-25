@@ -1,0 +1,47 @@
+@use '../../../styles/variable' as var;
+@use '../../../styles/colors' as color;
+
+.container {
+  width: var.$full;
+  padding: 0px 20px 12px;
+  max-width: 810.25px;
+  margin: var.$auto;
+
+  p {
+    font-weight: var.$font-normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    font-family: 'Open Sans';
+    color: #737373;
+
+    br {
+      display: none;
+    }
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  ol,
+  ul {
+    li {
+      margin-bottom: 12px;
+    }
+  }
+
+  a {
+    color: #737373;
+    text-decoration: var.$d-none;
+  }
+
+  td {
+    width: var.$half;
+  }
+
+  tr {
+    display: var.$flex;
+    gap: 6px;
+  }
+}

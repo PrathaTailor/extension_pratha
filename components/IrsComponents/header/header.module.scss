@@ -1,0 +1,33 @@
+@use '../../../styles/variable' as var;
+@use '../../../styles/colors' as color;
+
+.header {
+  width: var.$full;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.04);
+
+  .container {
+    width: var.$full;
+    max-width: 1480px;
+    padding: 28.5px 20px;
+    margin: var.$auto;
+
+    @media screen and (max-width: var.$reg-tablet) {
+      padding: 22px 20px;
+    }
+
+    .logo {
+      width: var.$full;
+      max-width: 258px;
+      height: var.$auto;
+
+      @media screen and (max-width: var.$reg-tablet) {
+        max-width: 206px;
+      }
+
+      @media screen and (max-width: var.$phablet) {
+        margin: var.$auto;
+      }
+
+    }
+  }
+}

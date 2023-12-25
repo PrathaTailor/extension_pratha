@@ -1,0 +1,195 @@
+@use '../../styles/variable' as var;
+@use '../../styles/colors' as color;
+
+.container {
+  margin: var.$auto var.$auto 150px;
+  max-width: 1068px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media screen and (max-width: var.$reg-tablet) {
+    margin: var.$auto var.$auto 80px;
+  }
+
+  .title {
+    font-weight: var.$font-bold;
+    font-size: var.$text-reg-lg;
+    line-height: 44px;
+    text-align: var.$center;
+    margin: 50px 0px;
+    color: color.$gray;
+
+    @media screen and (max-width: var.$reg-tablet) {
+      margin: 30px 0px;
+      font-size: 24px;
+      line-height: 33px;
+    }
+  }
+
+  .faqLists {
+    .faqItem {
+      padding: 10px 0px;
+      border: var.$border var.$decoration-solid color.$pale-lavender;
+      margin-bottom: 20px;
+
+      .faqTitle {
+        font-size: 18px;
+        line-height: var.$leading-lg;
+        padding: 0px 25px 0px 39px;
+        position: var.$relative;
+        cursor: var.$cursor-pointer;
+
+        @media screen and (max-width: var.$reg-tablet) {
+          font-size: 18px;
+          line-height: var.$leading-lg;
+        }
+
+        @media screen and (max-width: var.$phablet) {
+          padding: 0px 20px;
+        }
+
+        @media screen and (max-width: var.$mobile-l) {
+          font-size: 18px;
+          line-height: 25px;
+          padding: 0px 16.5px;
+        }
+
+        &:before {
+          content: '';
+          position: var.$absolute;
+          background-image: url('../../images/icons/icon-faq.png');
+          width: 14px;
+          height: 8px;
+          background-repeat: var.$no-repeat;
+          left: 10px;
+          top: var.$half;
+          transform: translate(0px, -(var.$half)) rotate(90deg) scale(-1);
+
+          @media screen and (max-width: var.$phablet) {
+            left: 4px;
+            width: 8px;
+            height: 4.5px;
+            background-size: var.$contain;
+          }
+
+          @media screen and (max-width: var.$mobile-l) {
+            width: 6px;
+          }
+        }
+
+        &:after {
+          width: 2px;
+          height: 10px;
+          top: var.$half;
+          transform: translate(0px, -(var.$half));
+          left: 29px;
+          position: var.$absolute;
+
+          @media screen and (max-width: var.$phablet) {
+            width: 4px;
+            height: 20px;
+            top: 49%;
+            transform: translate(0px, -(var.$half));
+            left: 38px;
+          }
+        }
+
+        &.activeTitle {
+          color: color.$blue;
+          font-weight: var.$font-bold;
+        }
+      }
+
+      .faqBody {
+        padding: 24px 25px 0px 39px;
+        display: var.$d-none;
+
+        @media screen and (max-width: var.$phablet) {
+          padding: 8px 20px 0px;
+        }
+
+        @media screen and (max-width: var.$mobile-l) {
+          padding: 4px 16.5px 0px;
+        }
+
+        h3 {
+          position: var.$relative;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 25px;
+
+          @media screen and (max-width: var.$reg-tablet) {
+            font-size: 16px;
+            line-height: 20px;
+          }
+
+          @media screen and (max-width: var.$mobile-l) {
+            font-size: 16px;
+            line-height: 25px;
+          }
+
+          ul {
+            display: var.$flex;
+            flex-direction: var.$flex-col;
+            gap: 24px;
+            padding-left: 10px;
+            margin: 0px 0px;
+
+
+            @media screen and (max-width: var.$mobile-l) {
+              padding-left: 13px;
+              gap: 11px;
+            }
+
+            li {
+              font-size: 16px;
+              line-height: 24px;
+
+              @media screen and (max-width: var.$phablet) {
+                font-size: 18px;
+                line-height: 27px;
+              }
+            }
+          }
+
+          p {
+            padding-bottom: 24px;
+            font-size: 18px;
+            line-height: 25px;
+
+            span {
+              color: color.$blue;
+              font-weight: var.$font-semibold;
+            }
+
+            &:last-child {
+              padding-bottom: 0px;
+            }
+          }
+        }
+
+      }
+
+      &.active {
+        background: color.$pale-lavender;
+
+        .faqTitle {
+          &:before {
+            transform: translate(0px, -(var.$half)) rotate(180deg) scale(-1);
+          }
+
+          &:after {
+            display: var.$d-none;
+          }
+        }
+
+        .faqBody {
+          display: var.$flex;
+          flex-direction: var.$flex-col;
+          gap: 22px;
+        }
+
+      }
+    }
+  }
+}

@@ -1,0 +1,503 @@
+@use '../../styles/variable' as var;
+@use '../../styles/colors' as color;
+
+.getExtContainer {
+  width: var.$full;
+  margin: 50px var.$auto;
+
+  .getExtTitleWrapper {
+    width: var.$full;
+    max-width: 1035px;
+    margin: 0px var.$auto;
+    text-align: var.$center;
+
+    .getExtTitle {
+      font-size: 32px;
+      line-height: 44px;
+      font-weight: var.$font-extrabold;
+      margin: 0px var.$auto 22px var.$auto;
+    }
+
+    .getExtSubtitle {
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: var.$font-normal;
+    }
+  }
+
+  .thinkperson {
+    max-width: 1040px;
+    height: 280px;
+    display: var.$flex;
+    margin: 30px var.$auto 0px var.$auto;
+    justify-content: var.$flex-between;
+    padding: 0px 4px;
+    cursor: var.$cursor-pointer;
+
+    .thinkperson1 {
+      min-width: 284px;
+      display: var.$flex;
+      justify-content: var.$flex-between;
+      flex-flow: var.$flex-col;
+      align-items: var.$center;
+      opacity: 0.3;
+
+      h2 {
+        font-weight: var.$font-bold;
+        font-size: 24px;
+        line-height: 33px;
+        display: var.$flex;
+        align-items: var.$center;
+        text-align: var.$center;
+        color: color.$violet;
+        position: var.$relative;
+        left: -3px;
+      }
+    }
+
+    .thinkperson2 {
+      min-width: 284px;
+      display: var.$flex;
+      justify-content: var.$flex-between;
+      flex-flow: var.$flex-col;
+      align-items: var.$center;
+      opacity: 0.3;
+      margin-top: 16px;
+
+      h2 {
+        font-weight: var.$font-bold;
+        font-size: 24px;
+        line-height: 33px;
+        display: var.$flex;
+        align-items: var.$center;
+        text-align: var.$center;
+        color: color.$blue;
+        padding-left: 21px;
+      }
+    }
+
+    .thinkperson3 {
+      min-width: 284px;
+      display: var.$flex;
+      justify-content: var.$flex-between;
+      flex-flow: var.$flex-col;
+      align-items: var.$center;
+      opacity: 0.3;
+
+      h2 {
+        font-weight: var.$font-bold;
+        font-size: 24px;
+        line-height: 33px;
+        display: var.$flex;
+        align-items: var.$center;
+        text-align: var.$center;
+        color: color.$jungle-green;
+        padding-left: 10px;
+      }
+    }
+  }
+
+  .thinkpersonsdata {
+    .thinkperson1data {
+      margin: 30px var.$auto 0px;
+      display: var.$d-none;
+      width: var.$full;
+      max-width: 1040px;
+      border-radius: 14px;
+      padding: 30px;
+      background-color: color.$light-lavender;
+
+      .thinkperson1dataTitle {
+        font-size: 24px;
+        line-height: 32.68px;
+        font-weight: var.$font-bold;
+        color: color.$violet;
+        margin-bottom: 20px;
+      }
+
+      .thinkperson1dataSubtitle {
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      .thinkperson1datamoreSubtitle {
+        font-size: 16px;
+        line-height: 22px;
+        margin-top: 5px;
+      }
+    }
+
+    .thinkperson2data {
+      margin: 30px var.$auto 0px;
+      display: var.$d-none;
+      width: var.$full;
+      max-width: 1040px;
+      border-radius: 14px;
+      padding: 30px;
+      background-color: color.$brilliant-white;
+
+      .thinkperson2dataTitle {
+        font-size: 24px;
+        line-height: 33px;
+        font-weight: var.$font-bold;
+        color: color.$blue;
+        ;
+        margin-bottom: 20px;
+      }
+
+      .thinkperson2dataSubtitle {
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      .thinkperson2datamoreSubtitle {
+        font-size: 16px;
+        line-height: 22px;
+        margin-top: 10px
+      }
+    }
+
+    .thinkperson3data {
+      margin: 30px var.$auto 0px;
+      display: var.$d-none;
+      width: var.$full;
+      max-width: 1040px;
+      border-radius: 14px;
+      padding: 30px;
+      background-color: color.$pale-cyan;
+
+      .thinkperson3dataTitle {
+        font-size: 24px;
+        line-height: 33px;
+        font-weight: var.$font-bold;
+        color: color.$jungle-green;
+        margin-bottom: 20px;
+      }
+
+      .thinkperson3dataSubtitle {
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      .thinkperson3datamoreSubtitle {
+        font-size: 16px;
+        line-height: 22px;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.getExtContainerp1 {
+  .thinkperson1 {
+    opacity: 1 !important;
+  }
+
+  .thinkperson1data {
+    display: var.$block !important;
+  }
+}
+
+.getExtContainerp2 {
+  .thinkperson2 {
+    opacity: 1 !important;
+  }
+
+  .thinkperson2data {
+    display: var.$block !important;
+  }
+}
+
+.getExtContainerp3 {
+  .thinkperson3 {
+    opacity: 1 !important;
+  }
+
+  .thinkperson3data {
+    display: var.$block !important;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+
+  .getExtContainer {
+    margin-top: 60px;
+    margin-bottom: 0px;
+
+    .getExtTitleWrapper {
+      max-width: calc(var.$full - 48px);
+
+      .getExtTitle {
+        font-size: 22px;
+        line-height: 30px;
+        margin-bottom: 10px;
+      }
+
+    }
+
+    .thinkperson {
+      max-width: calc(var.$full - 45px);
+      margin: 30px var.$auto 15px var.$auto;
+      height: 126px;
+
+      .thinkperson1 {
+        min-width: 100px;
+        max-width: 100px;
+        max-height: 126px;
+
+        img {
+          max-height: 87px;
+          min-width: 90px;
+        }
+
+        h2 {
+          font-size: 14px;
+          line-height: 19px;
+          margin-top: 3px;
+          left: -4px;
+        }
+      }
+
+      .thinkperson2 {
+        min-width: 100px;
+        max-width: 100px;
+        max-height: 126px;
+        margin-top: 0px;
+
+        img {
+          max-height: 106px;
+          min-width: 113px;
+          position: var.$relative;
+          top: -2px;
+          left: -6px;
+        }
+
+        h2 {
+          font-size: 14px;
+          line-height: 19px;
+          max-width: 88px;
+          padding-left: 0px;
+          margin-top: 4px;
+        }
+      }
+
+      .thinkperson3 {
+        min-width: 100px;
+        max-width: 100px;
+        max-height: 126px;
+
+        img {
+          max-height: 87px;
+          min-width: 98px;
+        }
+
+        h2 {
+          font-size: 14px;
+          line-height: 18px;
+          word-break: break-all;
+          width: 90px;
+          padding-left: 0px;
+          position: var.$relative;
+          left: 4px;
+        }
+      }
+    }
+
+    .thinkpersonsdata {
+      .thinkperson1data {
+        max-width: calc(var.$full - 20px);
+        padding: 15px 17px;
+        margin-top: 0px;
+
+
+        .thinkperson1dataTitle {
+          font-size: 20px;
+          line-height: 27px;
+          margin-bottom: 10px;
+
+          .thinkperson1dataSubtitle {
+            letter-spacing: 0.1px;
+          }
+
+          .thinkperson1datamoreSubtitle {
+            letter-spacing: 0.1px;
+          }
+        }
+      }
+
+      .thinkperson2data {
+        max-width: calc(var.$full - 40px);
+        padding: 15px;
+
+        .thinkperson2dataTitle {
+          font-size: 20px;
+          line-height: 27px;
+          margin-bottom: 10px;
+
+          .thinkperson2dataSubtitle {
+            letter-spacing: 0.1px;
+          }
+
+          .thinkperson2datamoreSubtitle {
+            letter-spacing: 0.1px;
+          }
+        }
+      }
+
+      .thinkperson3data {
+        max-width: calc(var.$full - 40px);
+        padding: 15px;
+
+        .thinkperson3dataTitle {
+          font-size: 20px;
+          line-height: 27px;
+          margin-bottom: 10px;
+
+          .thinkperson3dataSubtitle {
+            letter-spacing: 0.1px;
+          }
+
+          .thinkperson3datamoreSubtitle {
+            letter-spacing: 0.1px;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .getExtContainer {
+    margin-top: 60px;
+    margin-bottom: 0px;
+
+    .getExtTitleWrapper {
+      max-width: calc(var.$full - 48px);
+
+      p {
+        font-size: 22px;
+        line-height: 30px;
+      }
+
+    }
+
+    .thinkperson {
+      max-width: calc(var.$full - 60px);
+      margin: 30px var.$auto 15px var.$auto;
+      height: 126px;
+
+      .thinkperson1 {
+        min-width: 100px;
+        max-width: 100px;
+        max-height: 126px;
+
+        img {
+          max-height: 87px;
+          min-width: 90px;
+        }
+
+        h2 {
+          font-size: 14px;
+          line-height: 19px;
+        }
+      }
+
+      .thinkperson2 {
+        min-width: 100px;
+        max-width: 100px;
+        max-height: 126px;
+
+        img {
+          max-height: 84px;
+          min-width: 101px;
+        }
+
+        h2 {
+          font-size: 14px;
+          line-height: 19px;
+          max-width: 88px;
+        }
+      }
+
+      .thinkperson3 {
+        min-width: 100px;
+        max-width: 100px;
+        max-height: 126px;
+
+        img {
+          max-height: 87px;
+          min-width: 98px;
+        }
+
+        h2 {
+          font-size: 14pfullx;
+          line-height: 19px;
+          word-break: break-all;
+          width: 90px;
+        }
+      }
+    }
+
+    .thinkpersonsdata {
+      .thinkperson1data {
+        max-width: calc(var.$full - 40px);
+        padding: 15px;
+
+        .thinkperson1dataTitle {
+          font-size: 20px;
+          line-height: 27px;
+          margin-bottom: 10px;
+
+          .thinkperson1dataSubtitle {
+            letter-spacing: 0.1px;
+          }
+
+          .thinkperson1datamoreSubtitle {
+            letter-spacing: 0.1px;
+          }
+        }
+      }
+
+      .thinkperson2data {
+        max-width: calc(var.$full - 40px);
+        padding: 15px;
+
+        .thinkperson2dataTitle {
+          font-size: 20px;
+          line-height: 27px;
+          margin-bottom: 10px;
+
+          .thinkperson2dataSubtitle {
+            letter-spacing: 0.1px;
+          }
+
+          .thinkperson2datamoreSubtitle {
+            letter-spacing: 0.1px;
+          }
+        }
+      }
+
+      .thinkperson3data {
+        max-width: calc(var.$full - 40px);
+        padding: 15px;
+
+        .thinkperson3dataTitle {
+          font-size: 20px;
+          line-height: 27px;
+          margin-bottom: 10px;
+
+          .thinkperson3dataSubtitle {
+            letter-spacing: 0.1px;
+          }
+
+          .thinkperson3datamoreSubtitle {
+            letter-spacing: 0.1px;
+          }
+        }
+      }
+    }
+
+  }
+}

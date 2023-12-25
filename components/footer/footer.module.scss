@@ -1,0 +1,279 @@
+@use '../../styles/variable' as var;
+@use '../../styles/colors' as color;
+
+.footerContainer {
+  width: var.$full;
+  background-color: color.$light-lavender;
+  position: var.$relative;
+  padding-bottom: 85px;
+
+  @media screen and (max-width: var.$phablet) {
+    padding-bottom: 100px;
+  }
+
+  .footerWrapper {
+    width: var.$full;
+    max-width: 1080px;
+    margin: 0px var.$auto 0px;
+    padding: 97px 20px 20px;
+    display: var.$flex;
+    justify-content: var.$flex-between;
+
+    @media screen and (max-width: var.$xl-tablet) {
+      padding: 30px 20px 20px;
+    }
+
+    @media screen and (max-width: var.$phablet) {
+      padding: 0px 0px 5px;
+    }
+
+    .contentWrapper {
+      display: var.$flex;
+      flex-direction: var.$flex-col;
+      gap: 5px;
+
+      @media screen and (max-width: var.$xl-tablet) {
+        text-align: var.$center;
+      }
+
+      .logo {
+        position: var.$relative;
+        top: 2px;
+        width: 234px;
+        object-fit: var.$contain;
+        cursor: var.$cursor-pointer;
+        margin-bottom: 22px;
+      }
+
+      .footerHeading {
+        font-size: 12px;
+        line-height: 16px;
+      }
+
+      .footerContent {
+        font-size: 10px;
+        line-height: 14px;
+        width: var.$full;
+        max-width: 504px;
+
+        @media screen and (max-width: var.$xl-tablet) {
+          max-width: var.$full;
+        }
+      }
+
+      .footerSubcontent {
+        font-size: 10px;
+        line-height: 14px;
+        width: var.$full;
+        max-width: 526px;
+
+        @media screen and (max-width: var.$xl-tablet) {
+          max-width: var.$full;
+        }
+
+        span {
+          color: color.$violet;
+        }
+      }
+    }
+
+    .iconWrapper {
+      margin-bottom: 20px;
+      text-align: var.$right;
+
+      .iconGroup {
+        display: var.$flex;
+        justify-content: var.$end;
+        gap: 20px;
+        height: 70px;
+        align-items: var.$center;
+        margin-bottom: 20px;
+        margin-top: 3px;
+      }
+
+      .navigationWrapper {
+        display: var.$flex;
+        gap: 7.4px;
+        justify-content: var.$end;
+        margin-bottom: 10px;
+
+        @media screen and (max-width: var.$mobile-sm) {
+          gap: 1.2px;
+        }
+
+        span {
+          font-size: 12px;
+          line-height: 16px;
+
+          Link,
+          a {
+            color: color.$black;
+            text-decoration: var.$d-none;
+          }
+        }
+      }
+    }
+  }
+
+  .footerComment {
+    text-align: var.$center;
+    font-weight: var.$font-semibold;
+    font-size: 12px;
+    line-height: 16px;
+    color: color.$base-black;
+    padding-bottom: 50px;
+
+    @media screen and (max-width: var.$phablet) {
+      padding-bottom: 30px;
+    }
+
+
+  }
+}
+
+.stickyfooter {
+  display: var.$flex;
+  flex-direction: var.$flex-col;
+  justify-content: var.$center;
+  align-items: var.$center;
+  background: color.$brilliant-white;
+  height: 85px;
+  width: var.$full;
+  position: var.$fixed;
+  z-index: 9;
+  bottom: 0px;
+  padding: 20px;
+
+  &.resBtnWrapper {
+    transition: all ease 0.5s;
+
+    .btn {
+      height: 46px;
+      font-weight: var.$font-bold;
+      font-size: 20px;
+      line-height: 29px;
+      box-shadow: 0px 10px 0px color.$yellow, 0px 18px 0px -4px color.$spring-green;
+    }
+
+    @media screen and (max-width: var.$phablet) {
+      position: var.$fixed;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      z-index: 99;
+    }
+  }
+
+  .stickyfooterbox {
+    display: var.$flex;
+    align-items: var.$center;
+    width: var.$full;
+    justify-content: var.$end;
+    max-width: 1041px;
+
+    .stickyfooterp1 {
+      float: var.$left;
+
+      h6 {
+        font-weight: var.$font-bold;
+        font-size: 20px;
+        line-height: 27px;
+        color: color.$blue;
+      }
+    }
+
+    .stickyfooterp2 {
+      float: var.$left;
+      margin-left: 26px;
+
+      button {
+        width: 150px;
+        height: 39px;
+        background: color.$blue;
+        border-radius: 4px;
+        font-weight: var.$font-bold;
+        font-size: 14px;
+        line-height: 19px;
+        border: var.$d-none;
+        color: color.$white;
+        cursor: var.$cursor-pointer;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+
+
+  .footerWrapper {
+    flex-flow: var.$flex-col;
+    margin-top: 19px !important;
+    max-width: calc((var.$full) - 46px) !important;
+    margin-bottom: 5px !important;
+
+    .contentWrapper {
+      img {
+        margin: 7px var.$auto 32px var.$auto !important;
+      }
+
+      .footerHeading {
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.1px !important;
+        padding-left: 2px;
+      }
+
+      .footerContent {
+        font-size: 12px !important;
+        line-height: 16px !important;
+        padding-left: 2px;
+        letter-spacing: 0.03px !important;
+      }
+
+      .footerSubcontent {
+        font-size: 12px !important;
+        line-height: 16px !important;
+        margin-top: 10px;
+        letter-spacing: 0.01px !important;
+        padding-left: 2px;
+      }
+    }
+
+    .footerSubcontent {
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+
+    .iconGroup {
+      justify-content: var.$center !important;
+      margin-top: 2px !important;
+      margin-bottom: 36px !important;
+    }
+
+    .iconWrapper {
+      margin-bottom: 0px;
+    }
+
+    .navigationWrapper {
+      justify-content: var.$center !important;
+    }
+
+
+  }
+
+  .stickyfooter {
+    height: 106px;
+
+    .stickyfooterbox {
+      flex-flow: var.$flex-col;
+
+      .stickyfooterp1 {
+        margin-bottom: 10px;
+      }
+
+      .stickyfooterp2 {
+        margin-left: 0px;
+      }
+    }
+  }
+}

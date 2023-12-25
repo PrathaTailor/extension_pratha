@@ -1,0 +1,134 @@
+@use '../../../styles/variable' as var;
+@use '../../../styles/colors' as color;
+
+.taxFilingWrapper {
+    max-width: 892px;
+    margin: var.$auto;
+    display: var.$flex;
+    align-items: var.$center;
+    padding: 34px 20px;
+    border: 1px solid #D5D5D5;
+
+    @media screen and (max-width:var.$reg-tablet) {
+        flex-wrap: var.$wrap;
+        border: none;
+    }
+
+    @media screen and (max-width: var.$mobile-l) {
+        padding: 20px 24px;
+    }
+
+
+
+    .taxDeadline {
+        display: var.$flex;
+        align-items: var.$center;
+
+        @media screen and (max-width:var.$reg-tablet) {
+            width: var.$full;
+        }
+
+        .iconTaxFiling {
+            width: 64px;
+
+            @media screen and (max-width: var.$mobile-l) {
+                width: 40px;
+                height: 40px;
+                object-fit: var.$contain;
+            }
+        }
+
+        .taxFilingDesc {
+            font-size: 24px;
+            line-height: 30px;
+            font-weight: var.$font-bold;
+            color: color.$vulcan;
+            margin-left: 16px;
+            max-width: 303px;
+            font-family: 'Mulish';
+
+            @media screen and (max-width:var.$reg-tablet) {
+                max-width: var.$full;
+            }
+
+            @media screen and (max-width: var.$mobile-l) {
+                font-size: 16px;
+                line-height: 22px;
+            }
+
+            span {
+                color: #1E79B9;
+            }
+        }
+    }
+
+    .taxFilingInteraction {
+        padding-left: 20px;
+
+        @media screen and (max-width: var.$reg-tablet) {
+            width: var.$full;
+            margin-top: 15px;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            background: #1579C0;
+            font-family: 'Mulish';
+            font-weight: var.$font-extrabold;
+            font-size: 18px;
+            line-height: 18px;
+            width: var.$full;
+            max-width: 290px;
+            border: var.$d-none;
+            display: var.$flex;
+            align-items: var.$center;
+            cursor: var.$cursor-pointer;
+            border-radius: 8px;
+
+            @media screen and (max-width: var.$reg-tablet) {
+                margin: var.$auto;
+            }
+
+            @media screen and (max-width: var.$mobile-l) {
+                max-width: var.$full;
+                justify-content: var.$flex-between;
+                padding: 12px 20px 12px 20px;
+                max-width: 278px;
+            }
+
+            .btnText {
+                text-align: var.$left;
+                font-family: 'Mulish';
+                display: var.$inline-block;
+                margin-right: 16px;
+                cursor: var.$cursor-pointer;
+
+                .lg {
+                    display: var.$block;
+                    color: color.$white;
+
+                    @media screen and (max-width: var.$mobile-l) {
+                        font-size: 16px;
+                        line-height: 18px;
+                    }
+
+                    label {
+                        display: var.$block;
+                        color: color.$light-yellow;
+                        cursor: var.$cursor-pointer;
+                    }
+                }
+
+                .sm {
+                    display: var.$block;
+                    font-weight: var.$font-medium;
+                    font-size: 14px;
+                    line-height: 19px;
+                    color: color.$white;
+                    font-family: var.$font-openSans;
+                    margin-top: 2px;
+                }
+            }
+        }
+    }
+}

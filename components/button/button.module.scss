@@ -1,0 +1,47 @@
+@use '../../styles/variable' as var;
+@use '../../styles/colors' as color;
+
+.button {
+  padding: 10px 35px;
+  width: var.$full;
+  color: color.$white;
+  font-weight: var.$font-bold;
+  font-size: 18px;
+  line-height: 25px;
+  display: var.$inline-flex;
+  justify-content: var.$center;
+  align-items: var.$center;
+  border-radius: 4px;
+  border: var.$border var.$decoration-solid color.$white;
+  cursor: var.$cursor-pointer;
+
+  &.bgBlue {
+    border: var.$d-none;
+    background-color: color.$blue;
+
+    &:hover {
+      background-color: color.$deep-blue;
+    }
+  }
+
+
+  &.bgDarkBlue {
+    border: var.$d-none;
+    background-color: color.$dark-blue;
+  }
+
+  &.violet {
+    border: var.$d-none;
+    background-color: color.$violet;
+    border: var.$border var.$decoration-solid color.$white;
+
+    &:hover {
+      background-color: color.$deep-violet;
+    }
+  }
+
+  &.transparent {
+    background-color: color.$transparent;
+  }
+
+}

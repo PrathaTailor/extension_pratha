@@ -1,0 +1,171 @@
+@use '../../styles/variable' as var;
+@use '../../styles/colors' as color;
+
+
+.clientsays {
+  background: linear-gradient(90deg, color.$violet 0%, color.$light-blue var.$full);
+
+  .clientsaysp1 {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 44px;
+    text-align: var.$center;
+    color: color.$white;
+    width: var.$full;
+    max-width: 873px;
+    margin: 50px var.$auto;
+
+    h2 {
+      font-size: 32px;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  .clientsaysp2 {
+    max-width: 1040px;
+    margin: 0px var.$auto 50px var.$auto;
+    display: var.$flex;
+    gap: 25px;
+
+    .clientsaysp2box {
+      background: color.$magnolia;
+      border-radius: 14px;
+      padding: 30px 20px 27px 20px;
+      width: var.$full;
+      max-width: 330px;
+
+      .clientsaysp2boxs1 {
+        display: var.$flex;
+        align-items: var.$center;
+
+        h3 {
+          font-weight: var.$font-bold;
+          font-size: 24px;
+          line-height: 33px;
+          color: color.$violet;
+          display: var.$flex;
+          align-items: var.$center;
+          margin-left: 13px;
+        }
+      }
+
+      .clientsaysp2boxs2 {
+        h5 {
+          font-weight: var.$font-bold;
+          font-size: 20px;
+          line-height: 27px;
+          color: color.$violet;
+          margin-top: 20px;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-weight: var.$font-normal;
+          font-size: 16px;
+          line-height: 22px;
+          color: color.$base-black;
+          margin-bottom: 23px;
+        }
+      }
+
+      .clientsaysp2boxs3 {
+        float: var.$left;
+        width: var.$full;
+        position: var.$relative;
+        bottom: 3px;
+
+        img {
+          float: var.$left;
+          margin-right: 1px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+
+  .clientsays {
+    .clientsaysp1 {
+      margin: 62px var.$auto 28px var.$auto;
+      max-width: calc((var.$full) - 50px);
+
+      h2 {
+        font-size: 22px;
+        line-height: 30px;
+      }
+    }
+
+    .clientsaysp2 {
+      max-width: calc((var.$full) - 46px);
+      margin: 0px var.$auto 60px var.$auto;
+      flex-flow: var.$flex-col;
+      gap: 30px;
+
+      .clientsaysp2box {
+        max-width: var.$full;
+        padding: 30px 20px 30px 32px;
+        box-shadow: 1px 3px 11px color.$sapphire;
+
+        .clientsaysp2boxs1 {
+          padding-left: 0px;
+
+          h3 {
+            margin-left: 16px;
+          }
+        }
+
+        .clientsaysp2boxs2 {
+          h5 {
+            margin-bottom: 5px;
+            margin-top: 16px;
+          }
+
+          p {
+            margin-bottom: 16px;
+          }
+        }
+
+        .clientsaysp2boxs3 {
+          bottom: 0px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .clientsays {
+    .clientsaysp1 {
+      margin: 60px var.$auto 30px var.$auto;
+      max-width: calc((var.$full) - 60px);
+
+      h2 {
+        font-size: 22px;
+        line-height: 30px;
+      }
+    }
+
+    .clientsaysp2 {
+      max-width: calc((var.$full) - 50px);
+      margin: 0px var.$auto 60px var.$auto;
+      flex-flow: var.$flex-col;
+
+      .clientsaysp2box {
+        max-width: var.$full;
+
+        .clientsaysp2boxs2 {
+          h5 {
+            margin-bottom: 5px;
+            margin-top: 16px;
+          }
+
+          p {
+            margin-bottom: 16px;
+          }
+        }
+      }
+    }
+  }
+
+}
